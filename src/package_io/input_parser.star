@@ -251,6 +251,7 @@ def input_parser(plan, input_args):
         ],
         op_contract_deployer_params=struct(
             image=results["op_contract_deployer_params"]["image"],
+            image_inspect=results["op_contract_deployer_params"]["image_inspect"],
             l1_artifacts_locator=results["op_contract_deployer_params"][
                 "l1_artifacts_locator"
             ],
@@ -648,6 +649,7 @@ def default_op_contract_deployer_global_deploy_overrides():
 def default_op_contract_deployer_params():
     return {
         "image": "us-docker.pkg.dev/oplabs-tools-artifacts/images/op-deployer:v0.0.12",
+        "image_inspect": "us-docker.pkg.dev/oplabs-tools-artifacts/images/op-deployer:v0.0.12",
         "l1_artifacts_locator": "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-fffcbb0ebf7f83311791534a41e65ef90df47797f9ca8f86941452f597f7128c.tar.gz",
         "l2_artifacts_locator": "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-fffcbb0ebf7f83311791534a41e65ef90df47797f9ca8f86941452f597f7128c.tar.gz",
         "global_deploy_overrides": default_op_contract_deployer_global_deploy_overrides(),
