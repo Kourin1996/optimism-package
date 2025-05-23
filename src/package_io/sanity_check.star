@@ -142,6 +142,7 @@ SUBCATEGORY_PARAMS = {
         "isthmus_time_offset",
         "interop_time_offset",
         "fund_dev_accounts",
+        "use_custom_gas_token"
     ],
     "batcher_params": ["image", "extra_params"],
     "proposer_params": ["image", "extra_params", "game_type", "proposal_interval"],
