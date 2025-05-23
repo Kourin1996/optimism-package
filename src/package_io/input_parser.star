@@ -210,6 +210,7 @@ def input_parser(plan, input_args):
                     isthmus_time_offset=result["network_params"]["isthmus_time_offset"],
                     interop_time_offset=result["network_params"]["interop_time_offset"],
                     fund_dev_accounts=result["network_params"]["fund_dev_accounts"],
+                    use_custom_gas_token=result["network_params"]["use_custom_gas_token"]
                 ),
                 batcher_params=struct(
                     image=result["batcher_params"]["image"],
@@ -554,6 +555,7 @@ def default_network_params():
         "isthmus_time_offset": None,
         "interop_time_offset": None,
         "fund_dev_accounts": True,
+        "use_custom_gas_token": False
     }
 
 
