@@ -51,6 +51,8 @@ DEFAULT_DA_SERVER_PARAMS = {
         "--port=3100",
         "--log.level=debug",
     ],
+    "maintenance": False,
+    "image_proxy": ""
 }
 
 
@@ -246,6 +248,8 @@ def input_parser(plan, input_args):
                     enabled=result["da_server_params"]["enabled"],
                     image=result["da_server_params"]["image"],
                     cmd=result["da_server_params"]["cmd"],
+                    maintenance=result["da_server_params"]["maintenance"],
+                    image_proxy=result["da_server_params"]["image_proxy"]
                 ),
                 additional_services=result["additional_services"],
             )
@@ -691,4 +695,6 @@ def default_da_server_params():
         "enabled": False,
         "image": DEFAULT_DA_SERVER_PARAMS["image"],
         "cmd": DEFAULT_DA_SERVER_PARAMS["cmd"],
+        "maintenance": DEFAULT_DA_SERVER_PARAMS["maintenance"],
+        "image_proxy": DEFAULT_DA_SERVER_PARAMS["image_proxy"]
     }
